@@ -41,7 +41,7 @@ def login():
     form = LoginForm(request.form)
     error = None
     if request.method == 'POST' and form.validate():
-        user = mongo.db.test.users.find_one({"username": form.username.data})
+        user = mongo.db.users.find_one({"username": form.username.data})
         if user and User.validate_login(user['password'], form.password.data):
             user_obj = User(user['username'])
             login_user(user_obj)

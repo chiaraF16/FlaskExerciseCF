@@ -10,7 +10,7 @@ from flask_login import login_user, logout_user
 
 app = Flask(__name__, template_folder='templates', static_folder='static')
 
-app.config['MONGO_DBNAME'] = 'foodb'
+app.config['MONGO_DBNAME'] = 'cluster0'
 app.config['MONGO_URI'] = 'mongodb+srv://admin:admin1@cluster0-sjlj0.mongodb.net/test?retryWrites=true&w=majority'
 
 app.config['SECRET_KEY'] = 'sLgz46L6SAfy4MDtAxpdz1bKtO37H728'
